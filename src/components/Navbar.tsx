@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <nav 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-earth-ivory/95 shadow-md py-3' : 'bg-transparent py-6'
+        isScrolled ? 'bg-earth-ivory/95 backdrop-blur-sm shadow-md py-3' : 'bg-transparent py-6'
       }`}
     >
       <div className="container-custom flex justify-between items-center">
@@ -35,19 +35,19 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <div className="flex items-center space-x-6">
-            <Link to="/" className="text-denim-dark hover:text-denim-medium font-medium">
+            <Link to="/" className="text-denim-dark hover:text-denim-medium font-medium hover-underline transition-colors">
               Home
             </Link>
-            <a href="#about" className="text-denim-dark hover:text-denim-medium font-medium">
+            <a href="#about" className="text-denim-dark hover:text-denim-medium font-medium hover-underline transition-colors">
               About
             </a>
-            <a href="#products" className="text-denim-dark hover:text-denim-medium font-medium">
+            <a href="#products" className="text-denim-dark hover:text-denim-medium font-medium hover-underline transition-colors">
               Products
             </a>
-            <a href="#process" className="text-denim-dark hover:text-denim-medium font-medium">
+            <a href="#process" className="text-denim-dark hover:text-denim-medium font-medium hover-underline transition-colors">
               Process
             </a>
-            <a href="#impact" className="text-denim-dark hover:text-denim-medium font-medium">
+            <a href="#impact" className="text-denim-dark hover:text-denim-medium font-medium hover-underline transition-colors">
               Impact
             </a>
           </div>
@@ -68,35 +68,35 @@ const Navbar = () => {
           <div className="container-custom py-4 flex flex-col space-y-4">
             <Link 
               to="/" 
-              className="text-denim-dark hover:text-denim-medium font-medium py-2"
+              className="text-denim-dark hover:text-denim-medium font-medium py-2 hover-underline"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <a 
               href="#about" 
-              className="text-denim-dark hover:text-denim-medium font-medium py-2"
+              className="text-denim-dark hover:text-denim-medium font-medium py-2 hover-underline"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </a>
             <a 
               href="#products" 
-              className="text-denim-dark hover:text-denim-medium font-medium py-2"
+              className="text-denim-dark hover:text-denim-medium font-medium py-2 hover-underline"
               onClick={() => setIsMenuOpen(false)}
             >
               Products
             </a>
             <a 
               href="#process" 
-              className="text-denim-dark hover:text-denim-medium font-medium py-2"
+              className="text-denim-dark hover:text-denim-medium font-medium py-2 hover-underline"
               onClick={() => setIsMenuOpen(false)}
             >
               Process
             </a>
             <a 
               href="#impact" 
-              className="text-denim-dark hover:text-denim-medium font-medium py-2"
+              className="text-denim-dark hover:text-denim-medium font-medium py-2 hover-underline"
               onClick={() => setIsMenuOpen(false)}
             >
               Impact

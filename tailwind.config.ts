@@ -63,20 +63,20 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// DeniGen custom colors
+				// Updated DeniGen custom colors for a more sustainable denim theme
 				denim: {
-					dark: '#264653',
-					medium: '#457B9D',
-					light: '#A8DADC',
+					dark: '#1E3A54',    // Deeper indigo blue
+					medium: '#3E6B89',  // Rich medium blue
+					light: '#91C4D9',   // Soft washed denim
 				},
 				earth: {
-					beige: '#F4E1D2',
-					ivory: '#F9FAF6',
-					olive: '#7B886F',
+					beige: '#F1E4D0',   // Softer natural beige
+					ivory: '#F9F5EC',   // Warm cream ivory
+					olive: '#6B7D61',   // Forest olive
 				},
 				accent: {
-					mustard: '#E9C46A',
-					terracotta: '#E76F51',
+					mustard: '#D9B44A',  // Earthy mustard
+					terracotta: '#D27D5C', // Rust terracotta
 				},
 			},
 			fontFamily: {
@@ -115,11 +115,55 @@ export default {
 						transform: 'translateY(0)'
 					}
 				},
+				'slide-in': {
+					'0%': {
+						transform: 'translateX(-20px)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateX(0)',
+						opacity: '1'
+					}
+				},
+				'scale-in': {
+					'0%': {
+						transform: 'scale(0.9)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					}
+				},
+				'bounce-in': {
+					'0%': {
+						transform: 'scale(0.9)'
+					},
+					'70%': {
+						transform: 'scale(1.05)'
+					},
+					'100%': {
+						transform: 'scale(1)'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out',
+				'slide-in': 'slide-in 0.5s ease-out',
+				'scale-in': 'scale-in 0.5s ease-out',
+				'bounce-in': 'bounce-in 0.6s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'slow-spin': 'spin 8s linear infinite'
 			}
 		}
 	},

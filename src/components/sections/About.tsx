@@ -3,10 +3,10 @@ import { Button } from '@/components/ui/button';
 
 const About = () => {
   return (
-    <section id="about" className="section bg-earth-beige">
+    <section id="about" className="section bg-earth-beige denim-texture">
       <div className="container-custom">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+          <div className="animate-fade-in">
             <h2 className="text-3xl md:text-4xl mb-6">Our Sustainable Vision</h2>
             <p className="mb-4 text-lg">
               At DeniGen, we believe in a fashion industry that respects both people and the planet. Our journey began with a simple question: How can we transform denim waste into beautiful, functional pieces that tell a story?
@@ -19,15 +19,15 @@ const About = () => {
               <Button variant="outline" className="btn-secondary">Meet Our Team</Button>
             </div>
           </div>
-          <div className="relative">
-            <div className="aspect-[4/5] rounded-lg overflow-hidden">
+          <div className="relative animate-fade-in" style={{animationDelay: "0.3s"}}>
+            <div className="aspect-[4/5] rounded-lg overflow-hidden hover-scale">
               <img 
                 src="https://images.unsplash.com/photo-1584094278232-a4c35a30091f?q=80&w=1000&auto=format"
                 alt="Sustainable denim workspace" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-denim-dark text-white p-6 rounded-lg max-w-xs">
+            <div className="absolute -bottom-6 -left-6 bg-denim-dark text-white p-6 rounded-lg max-w-xs animate-bounce-in">
               <p className="font-semibold mb-2">Our Promise</p>
               <p className="text-sm">Every DeniGen piece is handcrafted with care, using 100% upcycled materials and ethical production practices.</p>
             </div>

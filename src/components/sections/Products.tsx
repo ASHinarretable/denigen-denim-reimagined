@@ -38,7 +38,7 @@ const Products = () => {
   return (
     <section id="products" className="section">
       <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl mb-4">Featured Collections</h2>
           <p className="text-lg text-denim-dark/80">
             Each piece in our collection is unique, sustainable, and tells its own story. From fashion to home decor, discover the versatility of upcycled denim.
@@ -46,8 +46,8 @@ const Products = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          {featuredProducts.map((product) => (
-            <Card key={product.id} className="border-none overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          {featuredProducts.map((product, index) => (
+            <Card key={product.id} className="border-none overflow-hidden shadow-lg product-card animate-fade-in" style={{animationDelay: `${0.2 * (index + 1)}s`}}>
               <div className="aspect-square overflow-hidden">
                 <img 
                   src={product.image} 
@@ -61,14 +61,14 @@ const Products = () => {
                 <p className="font-semibold">${product.price}</p>
               </CardContent>
               <CardFooter className="pt-2 pb-6">
-                <Button className="w-full bg-denim-medium hover:bg-denim-dark">View Details</Button>
+                <Button className="w-full bg-denim-medium hover:bg-denim-dark hover:translate-y-[-2px] transition-all duration-300">View Details</Button>
               </CardFooter>
             </Card>
           ))}
         </div>
         
-        <div className="mt-12 text-center">
-          <Button className="btn-secondary">View All Products</Button>
+        <div className="mt-12 text-center animate-fade-in" style={{animationDelay: "0.8s"}}>
+          <Button className="btn-secondary pulse-animation">View All Products</Button>
         </div>
       </div>
     </section>
